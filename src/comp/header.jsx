@@ -22,7 +22,7 @@ const Header = () => {
       <header className="hide-when-mobile ali ">
         <h1>
     
-          <Link to="/"> c4a.dev </Link>
+          <Link to="/"> LoDaBeyTestSite </Link>
         </h1>
         {/* <button
           onClick={() => {

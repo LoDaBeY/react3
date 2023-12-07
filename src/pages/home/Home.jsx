@@ -43,9 +43,7 @@ const Home = () => {
 
   // LEVEL3
   const [showModal, setshowModal] = useState(false);
-  const forgotPassword = () => {
-    setshowModal(true);
-  };
+
 
   const closeModal = () => {
     setshowModal(false);

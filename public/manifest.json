@@ -4,8 +4,8 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "c4a.store",
-  "short_name": "c4a.store",
+  "name": "Khaled",
+  "short_name": "LoDa",
   "icons": [
     {
       "src": "/icon-192x192.png",
