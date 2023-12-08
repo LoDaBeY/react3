@@ -9,6 +9,7 @@ import { useContext } from "react";
 import ThemeContext from "./context/ThemeContext";
 import Signin from './pages/sign-in/Singin.jsx';
 import Signup from './pages/Signup';
+import EditTask from "./pages/edit-task/editTask.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   },
 
 
+  {
+    path: "/edit-task",
+    element: <EditTask />,
+  },
 
 
   {

@@ -68,10 +68,7 @@ const Home = () => {
         <Header />
 
         <main>
-          <h1 style={{ fontSize: "28px" }}>
-            {" "}
-            <span>Welcome to React Level 2 🔥🔥🔥</span>{" "}
-          </h1>
+
           <p className="pls">
             Please{" "}
             <Link style={{ fontSize: "30px" }} to="/signin">
