@@ -8,8 +8,7 @@
 /* ==============================
 1-  OPIONS (filtered data)
 =================================*/
-.home .parent-of-btns {
-}
+
 
 .home .parent-of-btns button {
   background-color: #3467c2;
@@ -91,10 +90,32 @@
 /* ==============================
 4- Modal
 =================================*/
+
+
 .home .modal li{
   font-size: 13px;
   color: #333;
   list-style-type: circle;
   list-style-position: inside;
   margin-bottom: 6px;
+  height: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+
+ .TaskAlert{
+  background-color: rgb(65, 163, 26);
+  color: rgb(252, 252, 252);
+  padding: 10px;
+  font-size: 13px;
+  width: 200px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: fixed;
+  top: 100px;
+  transition: 1s all;
 }
