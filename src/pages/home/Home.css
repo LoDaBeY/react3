@@ -40,6 +40,7 @@
   height: 141px;
   border-radius: 5px;
   transition: 0.2s;
+  position: relative;
 }
 
 .home .all-tasks .one-task:hover {
@@ -59,7 +60,7 @@
   line-height: 29px;
   font-size: 13px;
   text-align: start;
-  margin: 0 11px;
+  margin: 0 16px;
 }
 .home .all-tasks .one-task .time {
   font-size: 11px;
@@ -67,6 +68,9 @@
   margin-right: 9px;
   color: rgb(164, 213, 255);
   line-height: 19px;
+  position: absolute;
+  bottom: 3px;
+  right: 10px;
 }
 
 /* ==============================
@@ -118,4 +122,12 @@
   position: fixed;
   top: 100px;
   transition: 1s all;
+}
+
+.TextWarning{
+  font-size: medium;
+  color: #e7e4e4;
+  background-color: red;
+  padding: 4px;
+  border-radius: 10px;
 }

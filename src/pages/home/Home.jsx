@@ -13,6 +13,7 @@ import { useState } from "react";
 import { doc, setDoc } from "firebase/firestore";
 import { MdOutlineTaskAlt } from "react-icons/md";
 import Modal2 from "./Modal2";
+import DataBaseViewer from "./DataBaseViewer";
 
 const Home = () => {
   const [array, setarray] = useState([]);
@@ -22,6 +23,7 @@ const Home = () => {
   const [TaskMassge, setTaskMassge] = useState(false);
   const [showModal, setshowModal] = useState(false);
   const [user, loading, error] = useAuthState(auth);
+  const [ShowWarningMassge, setShowWarningMassge] = useState(false);
 
   //Functions..........................
   const closeModal = () => {
@@ -38,7 +40,11 @@ const Home = () => {
 
   const addBTN = (eo) => {
     eo.preventDefault();
-    array.push(subTask);
+    setShowWarningMassge(false);
+
+    if (array.includes(subTask)) {
+      setShowWarningMassge(true);
+    } else array.push(subTask);
     console.log(array);
     setsubTask("");
   };
@@ -172,19 +178,7 @@ const Home = () => {
             </section>
 
             {/* SHOW all tasks */}
-            <section className="flex all-tasks mt">
-              <article dir="auto" className="one-task">
-                <Link to={"/edit-task"}>
-                  <h2> New Task </h2>
-                  <ul>
-                    <li>Sub task 1 </li>
-                    <li> Sub task 2</li>
-                  </ul>
-
-                  <p className="time">a day ago</p>
-                </Link>
-              </article>
-            </section>
+            <DataBaseViewer user={user} />
 
             {/* Add new task BTN */}
             <section className="mt">
@@ -209,6 +203,7 @@ const Home = () => {
                 subTask={subTask}
                 array={array}
                 ShowLoading={ShowLoading}
+                ShowWarningMassge={ShowWarningMassge}
               />
             )}
           </main>

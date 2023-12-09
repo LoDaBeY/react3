@@ -10,6 +10,7 @@ export default function Modal2({
   subTask,
   array,
   ShowLoading,
+  ShowWarningMassge
 }) {
   return (
     <Modal closeModal={closeModal}>
@@ -48,6 +49,8 @@ export default function Modal2({
             <li key={item}>{item}</li>
           ))}
         </ul>
+
+        {ShowWarningMassge && (<p className="TextWarning">This Data has been already added before.</p>)}
 
         <button
           onClick={async (eo) => {
