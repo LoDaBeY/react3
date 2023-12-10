@@ -178,7 +178,7 @@ const Home = () => {
             </section>
 
             {/* SHOW all tasks */}
-            <DataBaseViewer user={user} />
+            <DataBaseViewer user={user}  />
 
             {/* Add new task BTN */}
             <section className="mt">

@@ -1,11 +1,29 @@
 import "./editTask.css";
-
-import React from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "../../comp/header";
 import Footer from "../../comp/Footer";
+import TaskTitle from "./TaskTitle";
+import Tasks from "./Tasks";
+import TasksBtns from "./TasksBtns";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase/config";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const EditTask = () => {
+const [user] = useAuthState(auth);
+
+const navigate = useNavigate();
+useEffect(() => {
+  if (!user) {
+    navigate("/")
+  }
+});
+
+let { userId } = useParams();
+
+if (user) {
   return (
     <div>
       <Helmet>
@@ -15,56 +33,22 @@ const EditTask = () => {
       <Header />
       <div className="edit-task">
         {/* Title */}
-        <section className="title center">
-          <h1>
-            <input
-              value={""}
-              className="title-input center"
-              type="text"
-            />
-            <i className="fa-regular fa-pen-to-square"></i>
-          </h1>
-        </section>
+        <TaskTitle userId={userId} user={user}   />
 
         {/* Sub-tasks section */}
-        <section className="sub-task mtt">
-          <div className="parent-time">
-            <p className="time">Created: 6 days ago</p>
-            <div>
-              <input id="checkbox" type="checkbox" />
-              <label htmlFor="checkbox">Completed </label>
-            </div>
-          </div>
-
-          <ul>
-            <li className="card-task flex">
-              <p> Sub taskk </p>
-              <i className="fa-solid fa-trash"></i>
-            </li>
-
-            <li className="card-task flex">
-              <p> Sub taskk </p>
-              <i className="fa-solid fa-trash"></i>
-            </li>
-          </ul>
-        </section>
+        <Tasks userId={userId} user={user}/>
 
         {/* Add-more BTN && Delete BTN */}
-
-        <section className="center mtt">
-          <button className="add-more-btn">
-            Add more <i className="fa-solid fa-plus"></i>
-          </button>
-
-          <div>
-            <button className="delete">Delete task</button>
-          </div>
-        </section>
+        <TasksBtns userId={userId} user={user} />
+    
       </div>
 
       <Footer />
     </div>
   );
+}
+
+
 };
 
 export default EditTask;

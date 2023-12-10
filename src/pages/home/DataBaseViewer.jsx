@@ -12,6 +12,7 @@ function DataBaseViewer({ user }) {
 
   // you need to pass the value, loading and error every one by default in if statement and return them to the code.
 
+
   // when loading is called
   if (loading) {
     return (
@@ -33,7 +34,6 @@ function DataBaseViewer({ user }) {
   }
 
   // when you find a data in the data base, please note that you need to do a 2.map inside the first map to get the data of the details from the data base.
-
   if (value) {
     return (
       <section className="flex all-tasks mt">
@@ -41,12 +41,12 @@ function DataBaseViewer({ user }) {
           return (
             //put the key in the biggest item
             <article key={item.id} dir="auto" className="one-task">
-              <Link to={"/edit-task"}>
+              <Link to={`/edit-task/${item.data().id}`}>
                 <h2> {item.data().Title} </h2>
                 <ul>
                   {item.data().details.map((item, index) => {
                     if (index < 3) {
-                      return <li key={index}> {item} </li>;
+                      return <li key={item}> {item} </li>;
                     } else {
                       return false;
                     }
