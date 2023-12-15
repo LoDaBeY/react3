@@ -24,6 +24,7 @@ const Home = () => {
   const [showModal, setshowModal] = useState(false);
   const [user, loading, error] = useAuthState(auth);
   const [ShowWarningMassge, setShowWarningMassge] = useState(false);
+  const TimeId = new Date().getTime();
 
   //Functions..........................
   const closeModal = () => {
@@ -56,6 +57,7 @@ const Home = () => {
       Title: subTitle,
       details: array,
       id: TimeId,
+      completed: false,
     });
 
     setarray([]);
@@ -71,8 +73,6 @@ const Home = () => {
       setTaskMassge(false);
     }, 3000);
   };
-
-  const TimeId = new Date().getTime();
 
   const sendAgain = () => {
     sendEmailVerification(auth.currentUser).then(() => {
@@ -178,7 +178,7 @@ const Home = () => {
             </section>
 
             {/* SHOW all tasks */}
-            <DataBaseViewer user={user}  />
+            <DataBaseViewer user={user} />
 
             {/* Add new task BTN */}
             <section className="mt">

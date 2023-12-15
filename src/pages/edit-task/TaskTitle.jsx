@@ -4,7 +4,7 @@ import { db } from "../../firebase/config";
 import ReactLoading from "react-loading";
 
  
-function TaskTitle({userId, user}) {
+function TaskTitle({userId, user, TitleChange}) {
   const [value, loading, error] = useDocument(doc(db, user.uid, userId));
   if (loading) {
     return (
@@ -33,7 +33,9 @@ if (value) {
         defaultValue={value.data().Title}
         className="title-input center"
         type="text"
-        onChange={(eo) => {  }}
+        onChange={async(eo) => { 
+          TitleChange(eo)
+         }}
       />
       <i className="fa-regular fa-pen-to-square"></i>
     </h1>
