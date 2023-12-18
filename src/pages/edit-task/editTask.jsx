@@ -14,6 +14,7 @@ import { arrayRemove, doc, updateDoc } from "firebase/firestore";
 
 const EditTask = () => {
   const [user] = useAuthState(auth);
+  let { userId } = useParams();
 
   //Functions for changing the state of the tasks
 
@@ -34,8 +35,6 @@ const EditTask = () => {
     }
   };
 
-  const AddBtnAdder = () => {
-  };
 
   const DeleteTaskBtn = async(item) => {
     await updateDoc(doc(db, user.uid, userId), {
@@ -50,7 +49,6 @@ const EditTask = () => {
     }
   });
 
-  let { userId } = useParams();
 
   if (user) {
     return (
