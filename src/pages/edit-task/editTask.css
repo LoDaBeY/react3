@@ -135,3 +135,19 @@
 .Light .time {
   color: rgb(65, 71, 84);
 }
+
+.TaskAlert{
+  background-color: rgb(65, 163, 26);
+  color: rgb(252, 252, 252);
+  padding: 10px;
+  font-size: 13px;
+  width: 200px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: fixed;
+  top: 100px;
+  transition: 1s all;
+}
+

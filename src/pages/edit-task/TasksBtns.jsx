@@ -1,14 +1,21 @@
 
-function TasksBtns({userId, user}) {
+function TasksBtns({ DeleteAllTask, userId, user }) {
+
   return (
     <section className="center mtt">
-
-
-          <div>
-            <button className="delete">Delete task</button>
-          </div>
-        </section>
-  )
+      <div>
+        <button
+          onClick={(eo) => {
+            eo.preventDefault();
+            DeleteAllTask();
+          }}
+          className="delete"
+        >
+          Delete task
+        </button>
+      </div>
+    </section>
+  );
 }
 
-export default TasksBtns
+export default TasksBtns;

@@ -178,7 +178,7 @@ const Home = () => {
             </section>
 
             {/* SHOW all tasks */}
-            <DataBaseViewer user={user} />
+            <DataBaseViewer user={user}  />
 
             {/* Add new task BTN */}
             <section className="mt">
@@ -215,6 +215,7 @@ const Home = () => {
             {" "}
             Task Added Successfully <MdOutlineTaskAlt />{" "}
           </p>
+
 
           <Footer />
         </>

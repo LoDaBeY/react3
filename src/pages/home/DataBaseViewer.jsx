@@ -4,6 +4,7 @@ import { db } from "../../firebase/config";
 import ReactLoading from "react-loading";
 import { Link } from "react-router-dom";
 import Moment from "react-moment";
+import { MdOutlineTaskAlt } from "react-icons/md";
 
 //this is the file to show the tasks one by one
 
@@ -11,7 +12,6 @@ function DataBaseViewer({ user }) {
   const [value, loading, error] = useCollection(collection(db, user.uid));
 
   // you need to pass the value, loading and error every one by default in if statement and return them to the code.
-
 
   // when loading is called
   if (loading) {
@@ -37,11 +37,19 @@ function DataBaseViewer({ user }) {
   if (value) {
     return (
       <section className="flex all-tasks mt">
+        {value.docs.length === 0 && (
+          <p
+          >
+
+            All Tasks Deleted Successfully <MdOutlineTaskAlt />
+          </p>
+        )}
+
         {value.docs.map((item) => {
           return (
             //put the key in the biggest item
             <article key={item.id} dir="auto" className="one-task">
-              <Link to={`/edit-task/${item.data().id}`}>
+              <Link className="TaskLink" to={`/edit-task/${item.data().id}`}>
                 <h2> {item.data().Title} </h2>
                 <ul>
                   {item.data().details.map((item, index) => {

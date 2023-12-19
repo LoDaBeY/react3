@@ -73,6 +73,11 @@
   right: 10px;
 }
 
+.TaskLink{
+  display: block;
+  height: 100%;
+}
+
 /* ==============================
 3- Add new task BTN
 =================================*/
