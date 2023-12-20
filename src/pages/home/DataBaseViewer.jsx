@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Moment from "react-moment";
 import { MdOutlineTaskAlt } from "react-icons/md";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 
 //this is the file to show the tasks one by one
@@ -18,6 +19,7 @@ function DataBaseViewer({ user }) {
   const [SelectValue, setSelectValue] = useState("All Tasks");
   const [Opacity, setOpacity] = useState(true);
   // you need to pass the value, loading and error every one by default in if statement and return them to the code.
+  const { t } = useTranslation();
 
   // when loading is called
   if (loading) {
@@ -68,7 +70,7 @@ function DataBaseViewer({ user }) {
             }}
             style={{ opacity: Opacity ? "0.5" : "1" }}
           >
-            Newest first
+          {  t("Newest first")}
           </button>
 
           <button
@@ -78,16 +80,16 @@ function DataBaseViewer({ user }) {
             }}
             style={{ opacity: Opacity ? "1" : "0.5" }}
           >
-            Oldest first
+            {t("Oldest first")}
           </button>
           <select
           value={SelectValue}
                     onChange={(eo) => { 
                       Filter(eo)
                     }}>
-            <option value="All Tasks"> All Tasks </option>
-            <option value="Completed"> Completed </option>
-            <option value="Not Completed "> Not Completed </option>
+            <option value="All Tasks"> {t("All Tasks")} </option>
+            <option value="Completed"> {t( "Completed")} </option>
+            <option value="Not Completed "> {t("Not Completed")}</option>
           </select>
         </section>
 

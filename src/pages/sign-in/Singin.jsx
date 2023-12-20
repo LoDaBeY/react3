@@ -12,6 +12,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./signin.css";
 import Modal from "../../shared/Modal";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -21,6 +23,7 @@ const Signin = () => {
   const [hasError, sethasError] = useState(false);
   const [firebaseError, setfirebaseError] = useState("");
   const [showSendEmail, setshowSendEmail] = useState(false);
+  const { t } = useTranslation();
 
   const signInBTN = (eo) => {
     eo.preventDefault();
@@ -137,10 +140,10 @@ const Signin = () => {
               signInBTN(eo);
             }}
           >
-            Sign in
+            {t("Sign-in")}
           </button>
           <p className="account">
-            Don't hava an account <Link to="/signup"> Sign-up</Link>
+            {t("Don't hava an account")} <Link to="/signup"> {t("Sign-up")}</Link>
           </p>
 
           <p
@@ -148,8 +151,9 @@ const Signin = () => {
               forgotPassword();
             }}
             className="forgot-pass mtt"
+            dir="auto"
           >
-            Forgot password ?
+            {t("Forgot password")} 
           </p>
 
           {hasError && <h2>{firebaseError}</h2>}

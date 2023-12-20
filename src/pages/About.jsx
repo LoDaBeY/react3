@@ -13,7 +13,6 @@ const About = () => {
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
 
-  const [array, setarray] = useState(["html", "css", "react"]);
 
   useEffect(() => {
     if (!user && !loading) {
@@ -44,11 +43,7 @@ const About = () => {
           </Helmet>
           <Header />
           <main>
-            {array.map((item) => (
-              <div key={item}>
-                <h3> {item} </h3>
-              </div>
-            ))}
+
           </main>
           <Footer />
         </>

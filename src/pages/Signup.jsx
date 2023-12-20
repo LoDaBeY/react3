@@ -14,6 +14,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ const Signup = () => {
   const [firebaseError, setfirebaseError] = useState("");
   const [userName, setuserName] = useState("");
   const [user, loading, error] = useAuthState(auth);
+  const { t } = useTranslation();
 
   // Loading    (done)
   // NOT sign-in  (done)
@@ -107,8 +109,8 @@ const Signup = () => {
           <Header />
 
           <main>
-            <p>We send you an email to verify your Account</p>
-            <button className="delete">Send again</button>
+            <p> {t("VerifyMessage")} </p>
+            <button className="delete">{t("Send again")}</button>
           </main>
           <Footer />
         </div>
@@ -126,8 +128,8 @@ const Signup = () => {
 
         <main>
           <form>
-            <p style={{ fontSize: "23px", marginBottom: "22px" }}>
-              Create a new account <span>🧡</span>{" "}
+            <p dir="auto" style={{ fontSize: "23px", marginBottom: "22px" }}>
+            {t("Create a new account")} <span>🧡</span>{" "}
             </p>
 
             <input
@@ -162,10 +164,10 @@ const Signup = () => {
                 signUpBTN(eo);
               }}
             >
-              Sign up
+              {t("Sign-up")}
             </button>
             <p className="account">
-              Already hava an account <Link to="/signin"> Sign-in</Link>
+            {t("Already hava an account")} <Link to="/signin"> {t("Sign-in")}</Link>
             </p>
 
             {hasError && <h2>{firebaseError}</h2>}

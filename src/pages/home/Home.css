@@ -41,6 +41,7 @@
   border-radius: 5px;
   transition: 0.2s;
   position: relative;
+
 }
 
 .home .all-tasks .one-task:hover {
@@ -76,6 +77,13 @@
 .TaskLink{
   display: block;
   height: 100%;
+}
+
+.Light .home .all-tasks .TaskLink h2, .Light .home .all-tasks .TaskLink ul li{
+  color: rgb(29, 23, 23) !important; 
+}
+.Light .home .all-tasks .TaskLink {
+  border: #3467c2 1px solid;
 }
 
 /* ==============================
@@ -136,3 +144,6 @@
   padding: 4px;
   border-radius: 10px;
 }
+
+
+

@@ -14,6 +14,7 @@ import { doc, setDoc } from "firebase/firestore";
 import { MdOutlineTaskAlt } from "react-icons/md";
 import Modal2 from "./Modal2";
 import DataBaseViewer from "./DataBaseViewer";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const [array, setarray] = useState([]);
@@ -25,6 +26,7 @@ const Home = () => {
   const [user, loading, error] = useAuthState(auth);
   const [ShowWarningMassge, setShowWarningMassge] = useState(false);
   const TimeId = new Date().getTime();
+  const { t } = useTranslation();
 
   //Functions..........................
   const closeModal = () => {
@@ -61,11 +63,8 @@ const Home = () => {
     });
 
     setarray([]);
-    console.log("Arry is deleted");
     setsubTitle("");
-    console.log("Title is deleted");
     setsubTask("");
-    console.log("Input is deleted");
     setShowLoading(false);
     setshowModal(false);
     setTaskMassge(true);
@@ -178,8 +177,8 @@ const Home = () => {
                   setshowModal(true);
                 }}
                 className="add-task-btn"
-              >
-                Add new task <i className="fa-solid fa-plus"></i>
+              dir="auto">
+                {t("Add new task")} <i className="fa-solid fa-plus"></i>
               </button>
             </section>
 
@@ -204,7 +203,7 @@ const Home = () => {
             className="TaskAlert"
           >
             {" "}
-            Task Added Successfully <MdOutlineTaskAlt />{" "}
+            {t("Task Added Successfully")} <MdOutlineTaskAlt />{" "}
           </p>
 
 

@@ -1,5 +1,7 @@
+import { useTranslation } from "react-i18next";
 
 function TasksBtns({ DeleteAllTask, userId, user }) {
+  const { t } = useTranslation();
 
   return (
     <section className="center mtt">
@@ -11,7 +13,7 @@ function TasksBtns({ DeleteAllTask, userId, user }) {
           }}
           className="delete"
         >
-          Delete task
+          {t( "Delete task")}
         </button>
       </div>
     </section>

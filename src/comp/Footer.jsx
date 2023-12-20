@@ -1,14 +1,19 @@
-import React from "react";
-import    './Footer.css';
+import { useTranslation } from "react-i18next";
+import "./Footer.css";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
-<div className="myfooter">
+    <div className="myfooter">
       <footer className="ali   ">
-        Designed and developed by LoDaBeyTestSite
-         <span>  <i className="fa-solid fa-heart"></i> </span>
+      {t("Footer")}
+        <span>
+          {" "}
+          <i className="fa-solid fa-heart"></i>{" "}
+        </span>
       </footer>
-</div>
+    </div>
   );
 };
 

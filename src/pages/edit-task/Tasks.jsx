@@ -4,10 +4,12 @@ import { db } from "../../firebase/config";
 import ReactLoading from "react-loading";
 import Moment from "react-moment";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 function Tasks({ userId, user, TasksChanger, DeleteTaskBtn }) {
   const [value, loading, error] = useDocument(doc(db, user.uid, userId));
   const [InputNewTask, setInputNewTask] = useState("");
   const [showAddNewTask, setshowAddNewTask] = useState(false);
+  const { t } = useTranslation();
 
   if (loading) {
     return (
@@ -44,7 +46,7 @@ function Tasks({ userId, user, TasksChanger, DeleteTaskBtn }) {
               id="checkbox"
               type="checkbox"
             />
-            <label htmlFor="checkbox">Completed </label>
+            <label htmlFor="checkbox">{t( "Completed")} </label>
           </div>
         </div>
 
@@ -84,7 +86,7 @@ function Tasks({ userId, user, TasksChanger, DeleteTaskBtn }) {
               }}
               className="add"
             >
-              Add
+            {t( "Add")}
             </button>
 
             <button
@@ -93,7 +95,7 @@ function Tasks({ userId, user, TasksChanger, DeleteTaskBtn }) {
               }}
               className="cancel"
             >
-              Cancel
+            {t( "Cancel")}
             </button>
           </div>
         )}
@@ -106,7 +108,7 @@ function Tasks({ userId, user, TasksChanger, DeleteTaskBtn }) {
             }}
             className="add-more-btn"
           >
-            Add more <i className="fa-solid fa-plus"></i>
+          {t( "Add more")} <i className="fa-solid fa-plus"></i>
           </button>
         </div>
       </section>

@@ -1,0 +1,31 @@
+{
+  "LoDaBeyTestSite": " موقع السيد خالد غنيم",
+  "Language" : "اللغة",
+  "Sign-in" : "تسجيل الدخول",
+  "Sign-up" : "تسجيل في الموقع لأول مرة",
+  "Sign-out" :  "تسجيل الخروج",
+  "About" : "بشأننا",
+  "Profile" : "الحساب",
+  "Footer" : " تم التصميم بواسطة السيد خالد غنيم",
+  "VerifyMessage" : "لقد أرسلت لك رسالة للتأكيد علي حسابك",
+  "Send again" : "أرسل مجددًا",
+  "Create a new account" : "إنشاء حساب جديد",
+  "Already hava an account" : "لدي حساب بالفعل",
+  "Don't hava an account" : "ليس لدي حساب",
+  "Forgot password" : "نسيت كلمة المرور؟",
+  "Oldest first" : "الأقدم أولاً",
+  "Newest first" : "الأحدث أولاً",
+  "Not Completed" : "غير مكتملة",
+  "Completed" : "مكتملة",
+  "All Tasks" : "جميع المهام",
+  "Task Added Successfully" : "تمت إضافة المهمة بنجاح",
+  "Add new task" : "أضف مهمة جديدة",
+  "This Data has been already added before." : "تمت إضافة هذه البيانات بالفعل من قبل.",
+  "Add" : "أضف",
+  "Submit" : "أرسل إلي قاعدة البيانات",
+  "Cancel" : "ألغي",
+  "Add more" : "أضف المزيد",
+  "Delete task" : "مسح المهمة"
+
+
+}

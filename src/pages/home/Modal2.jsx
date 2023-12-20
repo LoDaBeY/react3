@@ -1,5 +1,6 @@
 import ReactLoading from "react-loading";
 import Modal from "../../shared/Modal";
+import { t } from "i18next";
 export default function Modal2({
   InputSubmit,
   addBTN,
@@ -40,7 +41,7 @@ export default function Modal2({
               addBTN(eo);
             }}
           >
-            Add
+            {t("Add")}
           </button>
         </div>
 
@@ -50,12 +51,13 @@ export default function Modal2({
           ))}
         </ul>
 
-        {ShowWarningMassge && (<p className="TextWarning">This Data has been already added before.</p>)}
+        {ShowWarningMassge && (<p className="TextWarning"> {t("This Data has been already added before.")} </p>)}
 
         <button
           onClick={async (eo) => {
             InputSubmit(eo);
           }}
+          dir="auto"
         >
           {ShowLoading ? (
             <ReactLoading
@@ -64,9 +66,7 @@ export default function Modal2({
               height={20}
               width={20}
             />
-          ) : (
-            "Submit"
-          )}
+          ) : t("Submit")}
         </button>
       </div>
     </Modal>

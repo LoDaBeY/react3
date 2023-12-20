@@ -1,0 +1,31 @@
+{
+  "LoDaBeyTestSite": "LoDa Bey Test Websitesi",
+  "Language" : "Dil",
+  "Sign-in" : "Giriş Yap",
+  "Sign-up" : "Kaydolun",
+  "Sign-out" :  "Çıkış Yapın",
+  "About" : "Hakkında",
+  "Profile" : "Profil Bilgileri",
+  "Footer" : " Khaled Ghonim tarafından tasarlandı ve geliştirildi",
+  "VerifyMessage" : "Hesabınızı doğrulamanız için size bir e-posta gönderiyoruz",
+  "Send again" : "Tekrar gönder",
+  "Create a new account" : "Yeni bir hesap oluşturun",
+  "Already hava an account" : "Zaten bir hesabınız var",
+  "Don't hava an account" : "Bir hesabınız yok mu?",
+  "Forgot password" : "Şifrenizi mi unuttunuz?",
+  "Oldest first" : "En eski ilk",
+  "Newest first" : "Önce en yeni",
+  "Not Completed" : "Henüz tamamlanmadı",
+  "Completed" : "tamamlandı",
+  "All Tasks" : "Tüm görevler",
+  "Task Added Successfully" : "Görev Başarıyla Eklendi",
+  "Add new task" : "Yeni görev ekle",
+  "This Data has been already added before." : "Bu Veri daha önce zaten eklenmişti.",
+  "Add" : "Ekle",
+  "Submit" : "Gönder",
+  "Cancel" : "Iptal",
+  "Add more" : "Daha Ekle",
+  "Delete task" : "Görevi Sil"
+
+
+}

@@ -1,3 +1,61 @@
+.Lang {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: -20px;
+  border: 1px solid;
+  padding: 8px 8px;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  border-top: 1px solid cyan;
+  width: 120px;
+  z-index: 1;
+  cursor: pointer;
+
+}
+
+.Light .Lang{
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: -20px;
+  border: 1px solid;
+  padding: 8px 8px;
+  background-color: rgb(58, 161, 161);
+  border-radius: 10px;
+  border-top: 1px solid cyan;
+  width: 120px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.Lang li {
+  padding: 10px 5px;
+  border-bottom: 1px solid black;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin: 5px 0;
+}
+
+.Lang li:last-child {
+  border-bottom: none;
+}
+
+li.lang:hover ul.Lang {
+  display: block;
+}
+
+ul.Lang li:hover {
+  background-color: rgba(0, 0, 0, 0.295);
+  cursor: pointer;
+}
+
+
+
 .myheader .ali {
   background-color: teal;
 }
@@ -18,8 +76,8 @@
 
 
 .main-list {
-  padding: 10px 20px;
-  font-size: 19px;
+  padding: 5px 10px;
+  font-size: 15px;
   position: relative;
 }
 
@@ -27,7 +85,8 @@
   padding: 8px 15px;
 }
 
-.main-link:hover,  .main-link.active{
+.main-link:hover,
+.main-link.active {
   color: cyan;
   box-shadow: 0 0 5px cyan;
   border-radius: 5px;
