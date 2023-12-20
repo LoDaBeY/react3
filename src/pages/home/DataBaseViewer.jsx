@@ -83,6 +83,7 @@ function DataBaseViewer({ user }) {
             {t("Oldest first")}
           </button>
           <select
+          dir="auto"
           value={SelectValue}
                     onChange={(eo) => { 
                       Filter(eo)

@@ -101,12 +101,12 @@ const Home = () => {
         <Header />
 
         <main>
-          <p className="pls">
-            Please{" "}
+          <p dir="auto" className="pls">
+            {t("Please")} {""}
             <Link style={{ fontSize: "30px" }} to="/signin">
-              sign in
+            {t("Sign-in")}
             </Link>{" "}
-            to continue...{" "}
+            {t("to continue")}...{" "}
             <span>
               <i className="fa-solid fa-heart"></i>
             </span>
@@ -166,9 +166,8 @@ const Home = () => {
           <main className="home">
             {/* OPIONS (filtered data) */}
 
-
             {/* SHOW all tasks */}
-            <DataBaseViewer user={user}  />
+            <DataBaseViewer user={user} />
 
             {/* Add new task BTN */}
             <section className="mt">
@@ -177,7 +176,8 @@ const Home = () => {
                   setshowModal(true);
                 }}
                 className="add-task-btn"
-              dir="auto">
+                dir="auto"
+              >
                 {t("Add new task")} <i className="fa-solid fa-plus"></i>
               </button>
             </section>
@@ -205,7 +205,6 @@ const Home = () => {
             {" "}
             {t("Task Added Successfully")} <MdOutlineTaskAlt />{" "}
           </p>
-
 
           <Footer />
         </>

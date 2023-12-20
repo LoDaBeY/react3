@@ -1,4 +1,4 @@
-.Lang {
+li .Lang {
   display: none;
   position: absolute;
   top: 25px;
@@ -10,7 +10,7 @@
   border-top: 1px solid cyan;
   width: 120px;
   z-index: 1;
-  cursor: pointer;
+
 
 }
 
@@ -26,6 +26,10 @@
   border-top: 1px solid cyan;
   width: 120px;
   z-index: 1;
+  cursor: pointer;
+}
+
+.lang p {
   cursor: pointer;
 }
 
@@ -54,6 +58,9 @@ ul.Lang li:hover {
   cursor: pointer;
 }
 
+li .signout{
+  cursor: pointer;
+}
 
 
 .myheader .ali {

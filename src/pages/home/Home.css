@@ -44,8 +44,23 @@
 
 }
 
+.Light .home .all-tasks .one-task {
+  border: 2px solid rgb(26, 204, 159);
+  margin: 40px 20px;
+  width: 300px;
+  height: 141px;
+  border-radius: 5px;
+  transition: 0.2s;
+  position: relative;
+}
+
 .home .all-tasks .one-task:hover {
   border-left: 8px solid antiquewhite;
+  cursor: pointer;
+}
+
+.Light .home .all-tasks .one-task:hover {
+  border-left: 8px solid rgb(3, 88, 70);
   cursor: pointer;
 }
 
@@ -63,6 +78,7 @@
   text-align: start;
   margin: 0 16px;
 }
+
 .home .all-tasks .one-task .time {
   font-size: 11px;
   text-align: right;
@@ -74,14 +90,16 @@
   right: 10px;
 }
 
-.TaskLink{
+.TaskLink {
   display: block;
   height: 100%;
 }
 
-.Light .home .all-tasks .TaskLink h2, .Light .home .all-tasks .TaskLink ul li{
-  color: rgb(29, 23, 23) !important; 
+.Light .home .all-tasks .TaskLink h2,
+.Light .home .all-tasks .TaskLink ul li {
+  color: rgb(29, 23, 23) !important;
 }
+
 .Light .home .all-tasks .TaskLink {
   border: #3467c2 1px solid;
 }
@@ -109,7 +127,7 @@
 =================================*/
 
 
-.home .modal li{
+.home .modal li {
   font-size: 13px;
   color: #333;
   list-style-type: circle;
@@ -122,7 +140,7 @@
 
 
 
- .TaskAlert{
+.TaskAlert {
   background-color: rgb(65, 163, 26);
   color: rgb(252, 252, 252);
   padding: 10px;
@@ -137,13 +155,10 @@
   transition: 1s all;
 }
 
-.TextWarning{
+.TextWarning {
   font-size: medium;
   color: #e7e4e4;
   background-color: red;
   padding: 4px;
   border-radius: 10px;
 }
-
-
-
